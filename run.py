@@ -6,13 +6,15 @@ from wox import Wox
 class Mock(Wox):
 
     def copyToClipboard(self, value):
-        os.system('echo | set /p nul=' + value.strip() + '| clip')
+        os.system('echo | set /p nul="' + value.strip() + '"| clip')
 
     def query(self, query):
         results = []
         irony = ""
         i = False
         for char in query:
+            if char == '\\' or char == '"':
+                continue
             if i:
                 irony += char.upper()
             else:
