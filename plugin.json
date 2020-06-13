@@ -1,12 +1,12 @@
 {
-    "ID":"981ba2de-f959-4e3e-acca-19f717e128cd",
+    "ID":"981ba2def9594e3eacca19f717e128cd",
     "ActionKeyword":"mock",
     "Name":"Mocking SpongeBob",
     "Description":"wRiTeS eVeRyThInG iN iRoNiC cApItAlIsAtIoN",
     "Author":"Tueska",
-    "Version":"1.0",
+    "Version":"1.1.0",
     "Language":"python",
-    "Website":"",
+    "Website":"https://github.com/Tueska/wox-mocking-spongebob",
     "IcoPath":"irony.png",
     "ExecuteFileName":"run.py"
 }

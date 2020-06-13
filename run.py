@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
 
-import os
+import pyperclip
 from wox import Wox
 
 class Mock(Wox):
 
     def copyToClipboard(self, value):
-        os.system('echo | set /p nul="' + value.strip() + '"| clip')
+        pyperclip.copy(value.strip())
 
     def query(self, query):
         results = []
         irony = ""
         i = False
         for char in query:
-            if char == '\\' or char == '"':
-                continue
             if i:
                 irony += char.upper()
             else:
